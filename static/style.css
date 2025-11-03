@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: #00f6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.badges .badge {
+  background: linear-gradient(45deg, #00f6ff, #ff00c8);
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  margin: 0.2rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00f6ff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-info {
+  padding: 0.5rem;
+  text-align: center;
+}
