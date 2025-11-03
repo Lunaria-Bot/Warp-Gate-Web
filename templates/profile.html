@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Profile - {{ player.username }}{% endblock %}
+{% block content %}
+<div class="profile-container">
+  <div class="profile-header glass">
+    <img src="{{ player.avatar_url }}" alt="Avatar" class="avatar">
+    <h2>{{ player.username }}</h2>
+    <p>ID Discord: {{ player.discord_id }}</p>
+    <div class="badges">
+      {% for badge in player.badges %}
+        <span class="badge">{{ badge }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="stats glass">
+    <h3>Stats</h3>
+    <ul>
+      <li>Total cards: {{ stats.total }}</li>
+      <li>Base: {{ stats.base }}</li>
+      <li>Awakened: {{ stats.awakened }}</li>
+      <li>Event: {{ stats.event }}</li>
+    </ul>
+  </div>
+
+  <div class="inventory glass">
+    <h3>Inventory</h3>
+    <div class="card-grid">
+      {% for card in inventory %}
+        <div class="card">
+          <img src="{{ card.image_url }}" alt="{{ card.character_name }}">
+          <div class="card-info">
+            <h4>{{ card.character_name }}</h4>
+            <p>{{ card.form | capitalize }} • {{ card.series }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
